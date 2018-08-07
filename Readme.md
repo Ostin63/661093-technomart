@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Дмитрий Хлобощин](https://up.htmlacademy.ru/htmlcss/22/user/661093).
-* Наставник: `Сергей Артёмов `.http://firefoxic.github.io
+* Наставник: [Сергей Артёмов](http://firefoxic.github.io).
 
 ---
 
