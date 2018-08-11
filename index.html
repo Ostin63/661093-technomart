@@ -97,14 +97,14 @@
             <ul class="list-icon-3">
               <li class="sliders">
                 <div class="slider">
-                  <div   class="slider-controls" hidden>
-                    <h2 class="visually-hidden">Слaйды каталогов</h2>
-                    <input class="visually-hidden product-1" type="radio" id="product-1" name="toggle">
+                  <h2 class="visually-hidden">Слaйды каталогов</h2>
+                  <input class="visually-hidden product-1" type="radio" id="product-1" name="toggle" hidden>
+                  <input class="visually-hidden product-2" type="radio" id="product-2" name="toggle" checked hidden>
+                  <div class="slider-controls">
                     <label class="slide-control slide-control-1 product-1" for="product-1">Первый</label>
-                    <input class="visually-hidden product-2" type="radio" id="product-2" name="toggle" checked>
                     <label class="slide-control slide-control-2 product-2" for="product-2">Второй</label>
                   </div>
-                  <div class="control-arrow" >
+                  <div class="control-arrow">
                     <label class="left" for="product-1"><span></span></label>
                     <label class="right" for="product-2"><span></span></label>
                   </div>
@@ -225,34 +225,40 @@
         </ul>
       </section>
       <section class="catalog-services">
-        <div class="serv">
-          <h2>Сервисы</h2>
-          <p>Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
-        </div>
-        <div class="slider-services">
-          <div class="slider-controls-services" hidden>
-            <input class="visually-hidden slider-control-services" type="radio" id="service-1" name="toggl" value="Доставка" checked>
-            <label for="service-1">Доставка</label>
-            <input class="visually-hidden slider-control-services" type="radio" id="service-2" name="toggl" value="Гарантия">
-            <label for="service-2">Гарантия</label>
-            <input class="visually-hidden slider-control-services" type="radio" id="service-3" name="toggl" value="Кредит">
-            <label for="service-3">Кредит</label>
+        <div class="container">
+          <div class="serv">
+            <h2>Сервисы</h2>
+            <p>Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
           </div>
-          <ul class="slider-item-wrapper">
-            <li class="slider-info slider-info-1">
-              <h3>Доставка</h3>
-              <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!</p>
-            </li>
-            <li class="slider-info slider-info-2">
-              <h3>Гарантия</h3>
-              <p>Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгаранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.</p>
-            </li>
-            <li class="slider-info slider-info-3">
-              <h3>Кредит</h3>
-              <p>Залезть в долговую яму стало проще!Кредитные консультанты придут вам на помощь.</p>
-              <a class="slider-item-button button" href="#">Отправить заявку</a>
-            </li>
-          </ul>
+          <div class="slider-services">
+            <ul class="slider-controls-services">
+              <li class="slider-item-wrapper">
+                <input class="visually-hidden slider-control-services" type="radio" id="service-1" name="toggl" value="Доставка" checked hidden>
+                <label for="service-1" hidden>Доставка</label>
+                <div class="slider-info slider-info-1">
+                  <h3>Доставка</h3>
+                  <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!</p>
+                </div>
+              </li>
+              <li class="slider-item-wrapper">
+                <input class="visually-hidden slider-control-services" type="radio" id="service-2" name="toggl" value="Гарантия" hidden>
+                <label for="service-2" hidden>Гарантия</label>
+                <div class="slider-info slider-info-2">
+                  <h3>Гарантия</h3>
+                  <p>Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгаранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.</p>
+                </div>
+              </li>
+              <li class="slider-item-wrapper">
+                <input class="visually-hidden slider-control-services" type="radio" id="service-3" name="toggl" value="Кредит" hidden>
+                <label for="service-3" hidden>Кредит</label>
+                <div class="slider-info slider-info-3">
+                  <h3>Кредит</h3>
+                  <p>Залезть в долговую яму стало проще!Кредитные консультанты придут вам на помощь.</p>
+                  <a class="slider-item-button button" href="#">ОТПРАВИТЬ ЗАЯВКУ</a>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
       <section class="main-bottom">
