@@ -10,7 +10,7 @@
         <a class="main-header-logo">Техномарт</a>
         <form action="#" method="post" class="search">
           <input type="search" placeholder="поиск" class="input">
-          <input type="submit">
+          <input type="submit" aria-label="кнопка">
         </form>
         <a href="#nowhere">Закладки: 0</a>
         <a class="basket" href="#nowhere">Корзина:<span class="zero">0</span><span class="ten">10</span></a>
@@ -101,12 +101,12 @@
                   <input class="visually-hidden product-1" type="radio" id="product-1" name="toggle" hidden>
                   <input class="visually-hidden product-2" type="radio" id="product-2" name="toggle" checked hidden>
                   <div class="slider-controls">
-                    <label class="slide-control slide-control-1 product-1" for="product-1">Первый</label>
-                    <label class="slide-control slide-control-2 product-2" for="product-2">Второй</label>
+                    <label class="slide-control slide-control-1 product-1" for="product-1" hidden>Первый</label>
+                    <label class="slide-control slide-control-2 product-2" for="product-2" hidden>Второй</label>
                   </div>
                   <div class="control-arrow">
-                    <label class="left" for="product-1"><span></span></label>
-                    <label class="right" for="product-2"><span></span></label>
+                    <label class="left" for="product-1" aria-label="влево"><span></span></label>
+                    <label class="right" for="product-2" aria-label="вправо"><span></span></label>
                   </div>
                   <ul class="slider-list">
                     <li class="slider-item slider-item-1">
