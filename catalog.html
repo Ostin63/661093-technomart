@@ -3,14 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>Интернет-магазин строительных материалов и инструментов для ремонта"Техномарт"</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="inner-page">
     <header class="main-header">
+      <div class="header container">
       <div class="top-menu">
         <a href="index.html" class="main-header-logo">Техномарт</a>
-        <form action="#" method="post" class="search">
+        <form action="#nohere" method="post" class="search">
           <input type="search" placeholder="поиск" class="input">
-          <input type="submit">
+          <button type="submit"><span class="visually-hidden">Отправить запрос</span></button>
         </form>
         <a href="#nowhere">Закладки: 0</a>
         <a class="basket" href="#nowhere">Корзина:<span class="zero">0</span><span class="ten">10</span></a>
@@ -63,18 +66,19 @@
           </li>
         </ul>
       </nav>
+      </div>
     </header>
     <main>
       <div class="store-templates container">
         <h1 class="visually-hidden">Каталог товаров</h1>
         <div class="store-catalog">
-          <a class="picture" href="index.html"><img src="img/icon-home.svg" alt="home"></a>
+          <a class="picture" href="index.html"><img src="img/icon-home.svg" width="15" height="12" alt="home"></a>
           <a class="catalog" href="#nowhere">Каталог</a>
           <a class="Tool" href="#nowhere">Инструмент</a>
           <a class="Punchers" href="#nowhere">Перфораторы</a>
         </div>
         <div class="store-item">
-          <h2>Перфораторы</h2>
+          <h2 class="contents">Перфораторы</h2>
         </div>
         <div class="catalog-product">
           <section class="filters">
@@ -92,8 +96,8 @@
                     <div class="toggle toggle-max"></div>
                   </div>
                   <div class="price-controls">
-                    <label>от <input name="min-price" type="text" value="0"></label>
-                    <label>до <input name="max-price" type="text" value="30 000"></label>
+                    <label><input name="min-price" type="text" value="0"></label>
+                    <label><input name="max-price" type="text" value="30 000"></label>
                   </div>
                 </div>
               </fieldset>
@@ -140,7 +144,7 @@
           </section>
           <div class="template-directory">
             <section class="sorting-template">
-              <h2>Сортировка:</h2>
+              <h2 class="contents">Сортировка:</h2>
               <div class="sorting-type-dir">
                 <ul class="sorting-type">
                   <li class="sorting-current">По цене</li>
@@ -290,14 +294,16 @@
         </div>
       </div>
       <section class="cite">
-        <h2>ПАРА СЛОВ О ПЕРФОРАТОРАХ</h2>
-        <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне. Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
+        <div class="container">
+        <h2 class="contents">Пара слов о перфораторах</h2>
+        <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.</p>
+        <p> Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
+        </div>
       </section>
     </main>
     <footer class="main-footer">
-      <section class="main-footer-top">
+      <section class="main-footer-top container">
         <h2 class="visually-hidden">Меню сайта</h2>
-        <div class="footer-top">
           <a class="logtype" href="index.html">Техномарт</a>
           <ul class="menu-footer-top">
             <li><a href="#nowhere">Компания</a></li>
@@ -313,9 +319,8 @@
             <li><a href="#nowhere">Инструмент</a></li>
             <li><a href="#nowhere">Спецпредложения</a></li>
           </ul>
-        </div>
       </section>
-      <section class="main-footer-bottom">
+      <section class="main-footer-bottom container">
         <h2 class="visually-hidden">Информация о компании и соцсети</h2>
         <div class="menu-footer-bottom">
           <p class="info">© 2010-2017 Компания «Техномарт» Все права защищены</p>

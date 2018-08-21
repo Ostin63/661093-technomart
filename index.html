@@ -3,12 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title>Интернет-магазин строительных материалов и инструментов для ремонта"Техномарт"</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
+      <div class="header container">
       <div class="top-menu">
         <a class="main-header-logo">Техномарт</a>
-        <form action="#" method="post" class="search">
+        <form action="#nohere" method="post" class="search">
           <input type="search" placeholder="поиск" class="input">
           <button type="submit"><span class="visually-hidden">Отправить запрос</span></button>
         </form>
@@ -16,7 +19,7 @@
         <a class="basket" href="#nohere">Корзина:<span class="zero">0</span><span class="ten">10</span></a>
         <a href="#nohere">Оформить заказ</a>
       </div>
-      <div class="middle-menu">
+        <div class="middle-menu">
         <div class="contact-phone">
           <span class="function">Интернет-магазин строительных материалов и инструментов для ремонта</span>
           <div class="contact-menu">
@@ -38,7 +41,7 @@
           </div>
         </div>
       </div>
-      <nav class="main-nav">
+        <nav class="main-nav">
         <ul class="site-navigation">
           <li>
             <a class="bottom">Главная</a>
@@ -63,10 +66,11 @@
           </li>
         </ul>
       </nav>
+      </div>
     </header>
     <main>
       <h1 class="visually-hidden">Интернет-магазин строительных материалов и инструментов для ремонта"Техномарт"</h1>
-      <section class="features">
+      <section class="features container">
         <h2 class="visually-hidden">Каталог услуг</h2>
         <div class="features-list">
           <ul class="list-icon-1">
@@ -130,9 +134,9 @@
           </div>
         </div>
       </section>
-      <section class="catalog-populars">
+      <section class="catalog-populars container">
         <div class="catalog-popular">
-          <h2>Популярные товары:</h2>
+          <h2 class="contents">Популярные товары:</h2>
           <a class="button" href="#nohere">все популярные товары</a>
         </div>
         <ul class="row">
@@ -190,9 +194,9 @@
           </div>
         </div>
       </section>
-      <section class="popular-producers">
+      <section class="popular-producers container">
         <div class="popular-prod">
-          <h2>Популярные Производители:</h2>
+          <h2 class="contents">Популярные Производители:</h2>
           <a class="button" href="#nohere">все производители</a>
         </div>
         <ul class="list-producers">
@@ -225,7 +229,7 @@
       <section class="catalog-services">
         <div class="container">
           <div class="serv">
-            <h2>Сервисы</h2>
+            <h2 class="contents">Сервисы</h2>
             <p>Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
           </div>
           <div class="slider-services">
@@ -259,11 +263,11 @@
           </div>
         </div>
       </section>
-      <section class="main-bottom">
+      <section class="main-bottom container">
         <h2 class="visually-hidden">Информация о компании «Техномарт»</h2>
         <div class="promo-contacts">
           <section class="promo">
-            <h2>Компания «Техномарт»</h2>
+            <h2 class="contents">Компания «Техномарт»</h2>
             <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
             <p>Мы можем доставить ваш товар в самые отдаленные точки России! Техномарт работает со многими транспортными компаниями:</p>
             <ul class="company">
@@ -274,7 +278,7 @@
             <a href="#nohere" class="button">Подробнее о компании</a>
           </section>
           <section class="contacts">
-            <h2>Контакты</h2>
+            <h2 class="contents">Контакты</h2>
             <p>Вы можете забрать товар сами, заехав в наш офис:</p>
             <a class="modal-map-button"><img alt="карта" src="img/map.png" width="300" height="158"></a>
             <a href="#nohere" class="button button-modal">Заблудились? Напишите нам!</a>
@@ -311,9 +315,8 @@
       </section>
     </main>
     <footer class="main-footer">
-      <section class="main-footer-top">
+      <section class="main-footer-top container">
         <h2 class="visually-hidden">Меню сайта</h2>
-        <div class="footer-top">
           <a class="logtype">Техномарт</a>
           <ul class="menu-footer-top">
             <li><a href="#nohere">Компания</a></li>
@@ -329,9 +332,8 @@
             <li><a href="#nohere">Инструмент</a></li>
             <li><a href="#nohere">Спецпредложения</a></li>
           </ul>
-        </div>
       </section>
-      <section class="main-footer-bottom">
+      <section class="main-footer-bottom container">
         <h2 class="visually-hidden">Информация о компании и соцсети</h2>
         <div class="menu-footer-bottom">
           <p class="info">© 2010-2017 Компания «Техномарт» Все права защищены</p>
