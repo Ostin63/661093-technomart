@@ -1,7 +1,7 @@
 @font-face {
   font-family: "Cuprum";
-  src: url("../fonts/cuprum.woff") format("woff"), 
-       url("../fonts/cuprum.woff2") format("woff2");
+  src: url("../fonts/cuprum.woff2") format("woff2"), 
+       url("../fonts/cuprum.woff") format("woff");
 
   font-weight: 400;
   font-style: normal;
@@ -9,8 +9,8 @@
 
 @font-face {
   font-family: "Cuprum";
-  src: url("../fonts/cuprumbold.woff") format("woff"), 
-       url("../fonts/cuprumbold.woff2") format("woff2");
+  src: url("../fonts/cuprumbold.woff2") format("woff2"), 
+       url("../fonts/cuprumbold.woff") format("woff");
 
   font-weight: 700;
   font-style: normal;
@@ -18,8 +18,8 @@
 
 @font-face {
   font-family: "Cuprum";
-  src: url("../fonts/cuprumitalic.woff") format("woff"), 
-       url("../fonts/cuprumitalic.woff2") format("woff2");
+  src: url("../fonts/cuprumitalic.woff2") format("woff2"), 
+       url("../fonts/cuprumitalic.woff") format("woff");
 
   font-weight: 400;
   font-style: italic;
@@ -27,8 +27,8 @@
 
 @font-face {
   font-family: "Cuprum";
-  src: url("../fonts/cuprumbolditalic.woff") format("woff"), 
-       url("../fonts/cuprumbolditalic.woff2") format("woff2");
+  src: url("../fonts/cuprumbolditalic.woff2") format("woff2"), 
+       url("../fonts/cuprumbolditalic.woff") format("woff");
 
   font-weight: 700;
   font-style: italic;
@@ -36,8 +36,8 @@
 
 @font-face {
   font-family: "PTSans";
-  src: url("../fonts/ptsans.woff") format("woff"), 
-       url("../fonts/ptsans.woff2") format("woff2");
+  src: url("../fonts/ptsans.woff2") format("woff2"), 
+       url("../fonts/ptsans.woff") format("woff");
 
   font-weight: 400;
   font-style: normal;
@@ -45,8 +45,8 @@
 
 @font-face {
   font-family: "PTSans";
-  src: url("../fonts/ptsansbold.woff") format("woff"), 
-       url("../fonts/ptsansbold.woff2") format("woff2");
+  src: url("../fonts/ptsansbold.woff2") format("woff2"), 
+       url("../fonts/ptsansbold.woff") format("woff");
 
   font-weight: 700;
   font-style: normal;
@@ -294,17 +294,19 @@ img {
 }
 
 .top-menu .main-header-logo {
-  padding: 0 55px;
-  padding-top: 15px;
-  padding-bottom: 8px;
-  margin-bottom: -1px;
+  width: 221px;
+  padding-top: 14px;
+  padding-bottom: 12px;
+  margin-bottom: -3px;
   text-align: center;
   font-size: 24px;
   line-height: 24px;
   font-weight: 400;
   text-transform: uppercase;
-  background: #ee3643;
-  border-bottom: 5px solid #b52933;
+    background-color: #ee3643;
+  box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
+  box-sizing: border-box;
+  
 }
 
 .top-menu .main-header-logo:active {
@@ -902,7 +904,7 @@ img {
 
 .slider-list .slider-item {
   display: none;
-  height: 265px;
+  height: 266px;
   padding-left: 24px;
 }
 
@@ -1035,7 +1037,7 @@ img {
 .catalog-popular .button,
 .popular-prod .button {
   box-sizing: border-box;
-  width: 252px;
+  width: 253px;
   height: 38px;
 }
 
@@ -1052,22 +1054,23 @@ img {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   width: 218px;
   margin-bottom: 20px;
-  border: 1px solid #ccc;
+  border: 1px solid #e5e5e5;
   font-size: 18px;
   line-height: 20px;
   font-weight: 700;
   text-align: center;
+  list-style: none;
 }
 
 .flag-new::before {
   content: "";
   position: absolute;
   top: 0;
-  right: 0;
+  right: 0px;
   width: 60px;
   height: 59px;
   background: url("../img/newflag.png") 0 0 no-repeat;
@@ -1177,24 +1180,30 @@ img {
 
 .catalog-item .title {
   padding: 0 25px;
-  margin-top: 0;
+  margin-top: 12px;
   margin-bottom: 5px;
+  font-family: "PTSans";
 }
 
 .catalog-item .discount {
-  margin-top: 10px;
+  height: 20px;
+  margin-top: 4px;
   margin-bottom: 3px;
+  font-size: 17px;
   font-family: "PTSans";
+  font-weight: 700;
   color: #999;
   text-decoration: line-through;
 }
 
 .catalog-item .price {
   position: relative;
-  width: 80px;
-  margin: 10px auto;
-  margin-bottom: 20px;
-  padding: 10px 30px;
+  margin-top: 6px;
+  padding: 9px 35px;
+  margin-bottom: 10px;
+  font-size: 17px;
+  font-family: "PTSans";
+  font-weight: 700;
   color: white;
   background-color: #ee3643;
   border-radius: 3px;
@@ -1204,10 +1213,10 @@ img {
   content: "";
   position: absolute;
   top: 0;
-  right: -20px;
+  right: -26px;
   width: 0;
   height: 0;
-  border: 20px solid white;
+  border: 19px solid white;
   border-left-color: #ee3643;
 }
 
