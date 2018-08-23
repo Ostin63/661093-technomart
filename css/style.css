@@ -117,10 +117,6 @@ img {
   padding-bottom: 60px;
 }
 
-.header a {
-  cursor: pointer; 
-}
-
 .main-header {
   font-family: "Cuprum", Arial, sans-serif;
   background: #293449;
@@ -176,7 +172,6 @@ img {
   width: 17px;
   height: 100%;
   border: 0;
-  cursor: pointer;
   background: url(../img/icon-search.svg) 50% no-repeat;
   opacity: 0.3;
 }
@@ -310,7 +305,6 @@ img {
   text-transform: uppercase;
   background: #ee3643;
   border-bottom: 5px solid #b52933;
-  cursor: pointer;
 }
 
 .top-menu .main-header-logo:active {
@@ -862,7 +856,6 @@ img {
   padding: 10px;
   border-radius: 50%;
   box-sizing: border-box;
-  cursor: pointer;
 }
 
 .slider-controls .slide-control::after {
@@ -1008,7 +1001,6 @@ img {
   background-color: #fb565a;
   border-radius: 3px;
   border: none;
-  cursor: pointer;
 }
 
 .icon .button {
@@ -1110,7 +1102,6 @@ img {
   text-decoration: none;
   text-transform: uppercase;
   border-radius: 3px;
-  cursor: pointer;
 }
 
 .catalog-item .buy:hover {
@@ -1303,7 +1294,6 @@ img {
   width: 240px;
   height: 63px;
   top: 30px;
-  cursor: pointer;
 }
 
 .slider-item-wrapper:nth-child(1) .slider-info {
@@ -1486,7 +1476,6 @@ img {
   padding: 20px 40px;
   background-color: #ee3643;
   border-bottom: 5px solid #b52933;
-  cursor: pointer;
 }
 
 .main-footer .logtype:hover {
@@ -1784,7 +1773,6 @@ img {
   color: #000000;
   opacity: 0.3;
   border-bottom: 1px dotted #f7f3ec;
-  cursor: pointer;
 }
 
 
@@ -1964,7 +1952,6 @@ fieldset:nth-child(3) .filter-option {
   background-color: #ababab;
   box-shadow: 0 2px 1px 0 #cfcfcf;
   border-radius: 50%;
-  cursor: pointer;
 }
 
 .range-controls .toggle-min {
@@ -2009,7 +1996,6 @@ fieldset:nth-child(3) .filter-option {
 .filter-option label {
   position: relative;
   display: block;
-  cursor: pointer;
   user-select: none;
   left: -4px;
   opacity: 0.6;
@@ -2276,8 +2262,6 @@ fieldset:nth-child(3) .filter-option {
   height: 22px;
   font-size: 0;
   border: 0;
-
-  cursor: pointer;
   z-index: 5;
 }
 
@@ -2309,11 +2293,6 @@ fieldset:nth-child(3) .filter-option {
   top: calc(50% - 620px / 2);
   left: calc(50% - 945px / 2);
   z-index: 2;
-}
-
-
-.modal-map-button {
-  cursor: pointer;
 }
 
 .modal-map iframe {
