@@ -1282,6 +1282,7 @@ img {
   font-size: 13px;
   line-height: 24px;
   font-family: "PTSans";
+  letter-spacing: 0.03px;
 }
 
 .slider-services {
@@ -1352,6 +1353,7 @@ img {
   line-height: 36px;
   font-weight: 400;
   text-transform: uppercase;
+  letter-spacing: 0.3px;
 }
 
 .slider-info p {
@@ -1359,7 +1361,7 @@ img {
   line-height: 24px;
   font-family: "PTSans";
   margin: 0;
-  letter-spacing: 1;
+  letter-spacing: 0.04px;
 }
 
 .slider-info-1 p {
@@ -1440,6 +1442,7 @@ img {
 
 .promo .contents {
   margin-bottom: 13px;
+  letter-spacing: -0.09px;
 }
 
 .main-bottom .contacts {
@@ -1465,6 +1468,7 @@ img {
   font-size: 13px;
   line-height: 24px;
   font-family: "PTSans";
+  letter-spacing: 0.12px;
 }
 
 .promo p {
@@ -1474,6 +1478,7 @@ img {
 .promo p:nth-child(3) {
   width: 390px;
   margin-bottom: 3px;
+  letter-spacing: 0.05px;
 }
 
 .contacts .contents {
@@ -1481,10 +1486,11 @@ img {
 }
 
 .contacts p {
-  width: 180px;
+  width: 190px;
   padding: 0;
   margin: 0;
   margin-bottom: 31px;
+  letter-spacing: 0;
 }
 
 .main-bottom .company {
@@ -1545,6 +1551,7 @@ img {
 
 .main-footer .logtype {
   width: 220px;
+  height: 68px;
   padding: 18px 41px 20px;
   font-size: 30px;
   line-height: 30px;
@@ -2220,6 +2227,18 @@ fieldset:nth-child(3) .filter-option {
   margin-top: 15px;
 }
 
+.filter-item:nth-child(3) .filter-option:nth-child(1) {
+  margin-top: -2px;
+  margin-left: -1px;
+  letter-spacing: 0.1px;
+}
+
+.filter-item:nth-child(3) .filter-option:nth-child(2) {
+  margin-top: 15px;
+  margin-left: -1px;
+  letter-spacing: 0.1px;
+}
+
 .filter-range label,
 .filter-range output {
   font-size: 16px;
@@ -2240,6 +2259,35 @@ fieldset:nth-child(3) .filter-option {
   margin-bottom: -2px;
 }
 
+.filter-item:nth-child(2){
+  position: relative;
+}
+
+.filter-item:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  top: -17px;
+  left: 0;
+  width: 220px;
+  height: 1px;
+  background-color: #e5e5e5;
+}
+
+.filter-item:nth-child(2)::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 220px;
+  height: 1px;
+  background-color: #e5e5e5;
+}
+
+.filter-item:nth-child(3){
+  margin-top: 19px;
+  letter-spacing: 0.7px;
+}
+
 .filter-input {
   opacity: 0.1;
 }
@@ -2249,14 +2297,16 @@ fieldset:nth-child(3) .filter-option {
 }
 
 .inner-page .filter-button {
-  padding: 20px 40px;
-  margin-top: 5px;
+  width: 140px;
+  padding: 9px 0;
+  margin-top: 59px;
   color: #000000;
   font-size: 13px;
   line-height: 18px;
   font-weight: 400;
   background: #ffffff;
   border: 1px solid #e5e5e5;
+  box-sizing: border-box;
 }
 
 .inner-page .filter-button:hover,
@@ -2276,13 +2326,14 @@ fieldset:nth-child(3) .filter-option {
 
 .cite {
   padding-top: 39px;
-  padding-bottom: 58px;
+  padding-bottom: 68px;
   margin-top: 60px;
   background-color: #f2f6f8;
 }
 
 .cite h2 {
-  margin-bottom: 40px;
+  margin-bottom: 26px;
+  letter-spacing: 0.2px;
 }
 
 .cite p {
@@ -2290,6 +2341,12 @@ fieldset:nth-child(3) .filter-option {
   font-size: 13px;
   line-height: 24px;
   font-family: "ptsans";
+  letter-spacing: 0.01px;
+}
+
+.cite p:nth-child(3) {
+  margin: 0;
+  letter-spacing: 0.14px;
 }
 
 
