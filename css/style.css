@@ -1038,7 +1038,7 @@ img {
 .row {
   padding-left: 0;
   margin-top: 22px;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -1196,7 +1196,7 @@ img {
   position: relative;
   margin-top: 7px;
   padding: 9px 35px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   font-size: 17px;
   font-family: "PTSans";
   font-weight: 700;
@@ -2413,7 +2413,7 @@ fieldset:nth-child(3) .filter-option {
   background-size: 100% 100%;
   top: calc(50% - 430px / 2);
   left: calc(50% - 620px / 2);
-  z-index: 25;
+  z-index: 28;
 }
 
 .modal-login .form-item {
@@ -2500,17 +2500,17 @@ fieldset:nth-child(3) .filter-option {
 }
 
 .modal-map {
-  width: 945px;
-  height: 450px;
-  top: calc(50% - 620px / 2);
-  left: calc(50% - 945px / 2);
-  z-index: 20;
+  position: fixed;
+  top: calc(50% - 446px / 2);
+  left: calc(50% - 940px / 2);
+  width: 940px;
+  height: 446px;
+  z-index: 25;
 }
 
-.modal-map iframe {
-  position: relative;
-  z-index: 2;
-  border: none;
+.map-container {
+  width: 940px;
+  height: 446px;
 }
 
 .modal-cash {

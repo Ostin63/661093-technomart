@@ -421,6 +421,7 @@
         evt.preventDefault();
         enrtyRoom.classList.remove("room");
       });
+        
       var link = document.querySelector(".button-modal");
       
       var popup = document.querySelector(".modal-login");
@@ -445,9 +446,9 @@
         
         if (storage) {
           fullname.value = storage;
-          fullname.focus();
-        } else {
           email.focus();
+        } else {
+          fullname.focus();
         }
       });
       
@@ -485,10 +486,23 @@
         evt.preventDefault();
         mapPopup.classList.remove("modal-show");
       });
-      
        
       }
-      
+      function initMap() {
+      var myLatLng = {
+        lat: 59.938794,
+        lng: 30.323083
+  };
+      var map = new google.maps.Map(document.querySelector('#map-container'), {
+        center: myLatLng,
+        disableDefaultUI: true,
+        zoom: 16
+  });
+      var marker = new google.maps.Marker({
+        map: map,
+        position: myLatLng,
+  });
+}
     </script>
   </body>
 </html>
