@@ -279,14 +279,14 @@
               </div>
             </section>
             <section class="modal-cash" hidden>
-              <h3>Окно добавления товара в корзину</h3>
+              <h3 class="visually-hidden">Окно добавления товара в корзину</h3>
               <div class="cash">
                 <a href="#nowhere" class="modal-close">Закрыть</a>
                 <img src="img/form-1.svg" width="66" height="66" alt="Отмечено">
                 <h3>Товар добавлен в корзину!</h3>
                 <div class="button-cash">
                   <button class="button" type="submit">Оформить заказ</button>
-                  <button class="button continue" type="submit">Продолжить покупки</button>
+                  <a class="button continue" href="catalog.html">Продолжить покупки</a>
                 </div>
               </div>
             </section>
@@ -363,5 +363,132 @@
         </div>
       </section>
     </footer>
+    <script>
+      
+      var cashPopup = document.querySelector(".modal-cash");
+      var elements = document.querySelectorAll("a.buy");
+      var cashClose = cashPopup.querySelector(".modal-close");
+      for (var i = 0; i < elements.length; i++) {
+      elements[i].addEventListener("click", function(evt) {
+        evt.preventDefault();
+        cashPopup.classList.add("modal-show");
+      });
+        
+      cashClose.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        cashPopup.classList.remove("modal-show");
+      });
+        
+      window.addEventListener("keydown", function (evt) {
+        if (evt.keyCode === 27) {
+          evt.preventDefault();
+          
+          if (popup.classList.contains("modal-show")) {
+            popup.classList.remove("modal-show");
+          }
+          
+          if (mapPopup.classList.contains("modal-show")) {
+            mapPopup.classList.remove("modal-show");
+          }
+          
+          if (cashPopup.classList.contains("modal-show")) {
+            cashPopup.classList.remove("modal-show");
+          }
+        }
+      });
+      }
+      
+      var addBasket = document.querySelector(".basket");
+      var elements = document.querySelectorAll("a.buy");
+      for (var i = 0; i < elements.length; i++) {
+      elements[i].addEventListener("click", function(evt) {
+        evt.preventDefault();
+        addBasket.classList.add("add");
+      });
+      
+      }
+      
+      var enrtyRoom = document.querySelector(".authorization");
+      var elements = document.querySelectorAll("a.bottom-entry");
+      var closeRoom = enrtyRoom.querySelector("a.exit");
+      for (var i = 0; i < elements.length; i++) {
+      elements[i].addEventListener("click", function(evt) {
+        evt.preventDefault();
+        enrtyRoom.classList.add("room");
+      });
+         
+      closeRoom.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        enrtyRoom.classList.remove("room");
+      });
+      var link = document.querySelector(".button-modal");
+      
+      var popup = document.querySelector(".modal-login");
+      var close = popup.querySelector(".modal-close");
+      
+      var form = popup.querySelector(".login-form");
+      var fullname = popup.querySelector("[name=fullname]");
+      var email = popup.querySelector("[name=email]");
+      
+      var isStorageSupport = true;
+      var storage = "";
+      
+      try {
+        storage = localStorage.getItem("fullname");
+      } catch (err) {
+        isStorageSupport = false;
+      }
+      
+      link.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        popup.classList.add("modal-show");
+        
+        if (storage) {
+          fullname.value = storage;
+          fullname.focus();
+        } else {
+          email.focus();
+        }
+      });
+      
+      close.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        popup.classList.remove("modal-show");
+        popup.classList.remove("modal-error");
+      });
+      
+      form.addEventListener("submit", function (evt) {
+        if (!fullname.value || !email.value) {
+          evt.preventDefault();
+          popup.classList.remove("modal-error");
+          popup.offsetWidth = popup.offsetWidth;
+          popup.classList.add("modal-error");
+        } else {
+          if (isStorageSupport) {
+            localStorage.setItem("fullname", fullname.value);
+          }
+        }
+      });
+        
+      var mapLink = document.querySelector(".modal-map-button");
+      
+      var mapPopup = document.querySelector(".modal-map");
+      var mapClose = mapPopup.querySelector(".modal-close");
+      
+        
+      mapLink.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        mapPopup.classList.add("modal-show");
+      });
+      
+      mapClose.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        mapPopup.classList.remove("modal-show");
+      });
+      
+       
+      }
+      
+    </script>
   </body>
 </html>
