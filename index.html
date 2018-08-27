@@ -298,18 +298,18 @@
           <div class="form-item">
             <p class="login-item">
               <label for="fullname">Ваше имя:</label>
-              <input class="name" type="text" name="fullname" id="fullname" placeholder="Имя Фамилия">
+              <input type="text" name="fullname" id="fullname" placeholder="Имя Фамилия">
             </p>
             <p class="login-item">
               <label for="email">Ваш e-mail:</label>
-              <input class="name" type="text" name="email" id="email" placeholder="email@example.com">
+              <input type="text" name="email" id="email" placeholder="email@example.com">
             </p>
           </div>
           <p class="login-item login-item-message">
             <label for="message">Текст письма:</label>
             <textarea name="message" id="message" rows="5" placeholder="В свободной форме"></textarea>
           </p>
-          <a href="#nohere" class="button">Отправить</a>
+          <button class="button" type="submit">Отправить</button>
         </form>
       </section>
       <section class="modal modal-map" hidden>
@@ -438,6 +438,7 @@
         evt.preventDefault();
         enrtyRoom.classList.remove("room");
       });
+        
       var link = document.querySelector(".button-modal");
       
       var popup = document.querySelector(".modal-login");
@@ -462,9 +463,9 @@
         
         if (storage) {
           fullname.value = storage;
-          fullname.focus();
-        } else {
           email.focus();
+        } else {
+          fullname.focus();
         }
       });
       

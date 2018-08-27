@@ -2408,7 +2408,7 @@ fieldset:nth-child(3) .filter-option {
   border-top: 7px solid #ff5357;
   box-sizing: border-box;
   background: #f4f4f4;
-  background: linear-gradient( #ffffff 318px, #f4f4f4 112px);
+  background: linear-gradient( #ffffff 315px, #f4f4f4 115px);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   top: calc(50% - 430px / 2);
@@ -2443,7 +2443,7 @@ fieldset:nth-child(3) .filter-option {
   font-family: "PTSans";
   padding: 8px;
   padding-left: 16px;
-  border: 2px solid #dee3e4;
+  border: 2px solid #d7dcde;
   color: rgb(169, 169, 169);
   outline: none;
 }
@@ -2460,7 +2460,7 @@ fieldset:nth-child(3) .filter-option {
 
 .login-item input:hover,
 .login-item textarea:hover   {
-  border: 2px solid #ee3643;
+  border: 2px solid #b5b5b5 ;
 }
 
 .login-item input:focus,
