@@ -229,7 +229,11 @@ img {
   padding-left: 5px;
 }
 
-.add {
+.inner-page .zero {
+  display: none;
+}
+
+.inner-page .basket {
   padding-right: 25px;
   box-sizing: border-box;
   background: #ee3643;
@@ -239,14 +243,11 @@ img {
   display: none;
 }
 
-.add .ten {
+.inner-page .ten {
   display: block;
   padding-left: 5px;
 }
 
-.add .zero {
-  display: none;
-}
 
 .top-menu .basket::before {
   content: "";
@@ -1091,24 +1092,26 @@ img {
 
 .catalog-item .buy,
 .catalog-item .bookmark {
-  position: relative;
   display: flex;
   justify-content: center;
   width: 129px;
   margin: 0 auto;
   margin-bottom: 7px;
-  padding: 7px 0;
   font-size: 14px;
   font-weight: 400;
   font-family: "Cuprum", sans-serif;
-  line-height: 18px;
-  border: 3px solid #63a63e;
-  border-bottom-color: #367315;
-  background-color: #63a63e;
-  color: white;
+  line-height: 18px; 
   text-decoration: none;
   text-transform: uppercase;
-  border-radius: 3px;
+}
+
+.catalog-item .buy {
+  position: relative;
+  width: 135px;
+  padding: 10px 0;
+  background-color: #63a63e;
+  box-shadow: inset 0px -3px 0 0 #367315;
+  color: white;
 }
 
 .catalog-item .buy:hover {
@@ -1126,8 +1129,8 @@ img {
 .catalog-item .buy::before {
   content: "";
   position: absolute;
-  top: 18%;
-  left: 10%;
+  top: 10px;
+  left: 15px;
   width: 15px;
   height: 15px;
   background: url("../img/cart-icon.svg") 0 0 no-repeat;
@@ -1139,9 +1142,10 @@ img {
 }
 
 .catalog-item .bookmark {
+  padding: 7px 0; 
   color: #32425c;
   background-color: white;
-  border-bottom-color: #63a63e;
+  border: 3px solid #63a63e;
 }
 
 .catalog-item .bookmark:hover {
@@ -1174,15 +1178,33 @@ img {
   height: 168px;
 }
 
+.catalog-item:nth-child(1) .image,
+.catalog-item:nth-child(3) .image{
+  margin-top: -1px;
+  margin-bottom: 1px; 
+}
+
+.inner-page .catalog-item:nth-child(1) .image,
+.inner-page .catalog-item:nth-child(3) .image{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.inner-page .catalog-item:nth-child(2) .image,
+.inner-page .catalog-item:nth-child(5) .image,.inner-page .catalog-item:nth-child(8) .image{
+  margin-top: -1px;
+  margin-bottom: 1px;
+}
+
 .catalog-item .image img {
   max-width: 100%;
 }
 
 .catalog-item .title {
   padding: 0 25px;
-  margin-left: -2px;
-  margin-top: 10px;
-  margin-bottom: 6px;
+  margin-left: -1px;
+  margin-top: 11px;
+  margin-bottom: 5px;
   font-family: "PTSans";
   width: 168px;
   letter-spacing: 0.0px;
@@ -1250,6 +1272,7 @@ img {
 
 .popular-prod .button {
   margin-top:-1px;
+  padding-top: 10px
 }
 
 .list-producers {
@@ -1303,18 +1326,26 @@ img {
 
 .serv .contents {
   margin-top: 30px;
-  margin-bottom: 13px;
 }
 
 .serv p {
+  margin: 0;
+  padding: 0;
+  margin-top: 1px;
+  margin-left: 1px;
   font-size: 13px;
   line-height: 24px;
   font-family: "PTSans";
-  letter-spacing: 0.03px;
+  letter-spacing: 0.06px;
+}
+
+.serv p:nth-child(3) {
+  margin-top: 0px;
+  letter-spacing: 0.01px;
 }
 
 .slider-services {
-  margin-top: 1px;
+  margin-top: 19px;
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -1324,7 +1355,7 @@ img {
   position: relative;
   list-style: none;
   padding-left: 0;
-  margin-top: 24px;
+  margin-top: 20px;
 }
 
 .slider-controls-services::after {
@@ -1345,11 +1376,17 @@ img {
   top: 30px;
 }
 
+.slider-item-wrapper:nth-child(2) label {
+  padding-top: 12px;
+  padding-left: 22px;
+  letter-spacing: 0.2px;
+}
+
 .slider-item-wrapper:nth-child(1) .slider-info {
   background-image: url("../img/transport.png");
   background-size: 468px 261px;
   background-repeat: no-repeat;
-  background-position: 151px 26px;
+  background-position: 151px 25px;
 }
 
 .slider-item-wrapper:nth-child(2) .slider-info {
@@ -1375,7 +1412,6 @@ img {
 .slider-info h3 {
   width: 600px;
   margin: 0;
-  margin-top: 1px;
   margin-bottom: 25px;
   font-size: 36px;
   line-height: 36px;
@@ -1389,7 +1425,8 @@ img {
   line-height: 24px;
   font-family: "PTSans";
   margin: 0;
-  letter-spacing: 0.04px;
+  margin-left: 0px;
+  letter-spacing: 0.05px;
 }
 
 .slider-info-1 p {
@@ -1451,7 +1488,7 @@ img {
 /*promo*/
 
 .main-bottom {
-  padding-top: 57px;
+  padding-top: 56px;
   padding-bottom: 86px;
 }
 
@@ -1470,7 +1507,7 @@ img {
 
 .promo .contents {
   margin-bottom: 13px;
-  letter-spacing: -0.09px;
+  letter-spacing: -0.10px;
 }
 
 .main-bottom .contacts {
@@ -1507,7 +1544,7 @@ img {
   width: 390px;
   margin-top: 13px;
   margin-bottom: 3px;
-  letter-spacing: 0.02px;
+  letter-spacing: 0.04px;
 }
 
 .contacts .contents {
@@ -1709,9 +1746,9 @@ img {
 }
 
 .main-footer-bottom .footer-social {
-  width: 129px;
+  width: 130px;
   margin-top: 20px;
-  margin-left: 109px;
+  margin-left: 110px;
   padding-left: 0;
   display: flex;
   justify-content: space-between;
