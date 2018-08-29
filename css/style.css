@@ -2574,7 +2574,7 @@ fieldset:nth-child(3) .filter-option {
   left: -3px;
   width: 28px;
   height: 3px;
-  background-color: red;
+  background-color: rgba(268, 54, 67, 0.8);
 }
 
 .modal-close::before {
@@ -2583,6 +2583,16 @@ fieldset:nth-child(3) .filter-option {
 
 .modal-close::after {
   transform: rotate(-45deg);
+}
+
+.modal-close:hover::before,
+.modal-close:hover::after {
+  opacity: 0.3;
+} 
+
+.modal-close:active::before,
+.modal-close:active::after {
+  opacity: 1;
 }
 
 .modal-map {
