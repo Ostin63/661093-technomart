@@ -2154,7 +2154,7 @@ img {
   background-color: #f7f3ec;
 }
 
-.range-label {
+.range-controls span {
   position: relative;
   display: inline-block;
   margin-top: 90px;
@@ -2172,12 +2172,12 @@ img {
   background-color: #f7f3ec;
 }
 
-.range-label-min {
+.range-controls span:nth-child(1) {
   position: relative;
   margin-left: -30px;
 }
 
-.range-label-min::after {
+.range-controls span:nth-child(1)::after {
   content: "";
   position: absolute;
   top: 18px;
@@ -2187,7 +2187,7 @@ img {
   background-color: #000000;
 }
 
-.range-label-max {
+.range-controls span:nth-child(4) {
   margin-left: 22px;
   margin-right: -20px;
 }
