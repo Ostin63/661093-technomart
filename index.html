@@ -186,15 +186,15 @@
       <section class="modal-cash" hidden>
         <h3 class="visually-hidden">Окно добавления товара в корзину</h3>
         <div class="cash">
-            <a href="#nowhere" class="modal-close">Закрыть</a>
-            <img src="img/form-1.svg" width="66" height="66" alt="Отмечено">
-            <h3>Товар добавлен в корзину!</h3>
-            <div class="button-cash">
-              <button class="button" type="submit">Оформить заказ</button>
-              <a class="button continue" href="catalog.html">Продолжить покупки</a>
-            </div>
+          <a href="#nowhere" class="modal-close">Закрыть</a>
+          <img src="img/form-1.svg" width="66" height="66" alt="Отмечено">
+          <h3>Товар добавлен в корзину!</h3>
+          <div class="button-cash">
+            <button class="button" type="submit">Оформить заказ</button>
+            <a class="button continue" href="catalog.html">Продолжить покупки</a>
           </div>
-        </section>
+        </div>
+      </section>
       <section class="popular-producers container">
         <div class="popular-prod">
           <h2 class="contents">Популярные Производители:</h2>
@@ -382,7 +382,6 @@
       </section>
     </footer>
     <script>
-      
       var cashPopup = document.querySelector(".modal-cash");
       var elements = document.querySelectorAll("a.buy");
       var cashClose = cashPopup.querySelector(".modal-close");
@@ -500,17 +499,17 @@
       var myLatLng = {
         lat: 59.938794,
         lng: 30.323083
-  };
+      };
       var map = new google.maps.Map(document.querySelector('#map-container'), {
         center: myLatLng,
         disableDefaultUI: true,
         zoom: 16
-  });
+      });
       var marker = new google.maps.Marker({
         map: map,
         position: myLatLng,
-  });
-}
+      });
+      }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBi_yaXkh4NpYV478vTlBeoPimsvPKi-18&callback=initMap"></script>
   </body>
