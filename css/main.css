@@ -541,14 +541,14 @@ img {
 }
 
 .personal-area a:nth-child(2)::after {
-  content: ".";
+  content: "";
   position: absolute;
-  top: -10px;
-  right: -2px;
-  width: 7px;
-  height: 7px;
-  font-size: 40px;
-  color: #000000;
+  top: 7px;
+  right: 0;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #000000;
 }
 
 .main-nav {
@@ -2114,8 +2114,6 @@ img {
 }
 
 .range {
-  width: 220px;
-  margin: 0 auto;
   margin-top: 80px;
   padding: 0;
   border: none;
@@ -2140,6 +2138,16 @@ img {
   margin-left: 30px;
   margin-right: 20px;
   box-sizing: border-box;
+}
+
+.range-controls::after {
+  content: "";
+  position: absolute;
+  top: 151px;
+  left: -30px;
+  width: 220px;
+  height: 1px;
+  background-color: #e5e5e5;
 }
 
 .range-controls::before {
@@ -2383,16 +2391,6 @@ fieldset:nth-child(3) .filter-option {
 
 .filter-item:nth-child(2) {
   position: relative;
-}
-
-.filter-item:nth-child(2)::before {
-  content: "";
-  position: absolute;
-  top: -17px;
-  left: 0;
-  width: 220px;
-  height: 1px;
-  background-color: #e5e5e5;
 }
 
 .filter-item:nth-child(2)::after {

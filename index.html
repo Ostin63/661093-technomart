@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Интернет-магазин строительных материалов и инструментов для ремонта"Техномарт"</title>
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
@@ -186,11 +186,11 @@
       <section class="modal-cash" hidden>
         <h3 class="visually-hidden">Окно добавления товара в корзину</h3>
         <div class="cash">
-          <a href="#nowhere" class="modal-close">Закрыть</a>
+          <button class="modal-close">Закрыть</button>
           <img src="img/form-1.svg" width="66" height="66" alt="Отмечено">
           <h3>Товар добавлен в корзину!</h3>
           <div class="button-cash">
-            <button class="button" type="submit">Оформить заказ</button>
+            <a class="button checkout" href="#nohere">Оформить заказ</a>
             <a class="button continue" href="catalog.html">Продолжить покупки</a>
           </div>
         </div>
@@ -381,207 +381,7 @@
         </div>
       </section>
     </footer>
-    <script>
-      if(document.querySelector('#form-filter')) {
-      var range = {
-      min: 0,
-      max: 37000,
-      step: 100
-      }
-      var form = document.querySelector('.form')
-      var rangeBar = document.querySelector('.range-bar')
-      var leverMin = document.querySelector('.range-lever-min')
-      var leverMax = document.querySelector('.range-lever-max')
-      var scaleLength = document.querySelector('.range-scale').offsetWidth
-      form.price[0].step = range.step
-      form.price[0].step = range.step
-      form.price[1].max = range.max
-      
-      var onValuesGetting = function () {
-      var valueMin = form.price[0].value
-      var valueMax = form.price[1].value
-      var leverMinPos = 100 * valueMin / range.max + '%'
-      var leverMaxPos = 100 * valueMax / range.max + '%'
-      form.priceOutput[0].value = valueMin
-      form.priceOutput[1].value = valueMax
-      form.price[0].max = valueMax
-      form.price[1].min = valueMin
-      rangeBar.style.left = leverMinPos
-      rangeBar.style.right = 'calc(100% - ' + leverMaxPos + ')'
-      leverMin.style.left = 'calc(' + leverMinPos + ' - ' + leverMin.offsetWidth / 2 + 'px)'
-      leverMax.style.left = 'calc(' + leverMaxPos + ' - ' + leverMax.offsetWidth / 2 + 'px)'
-      }
-      
-      var onLeverGrabbing = function (event) {
-      event.preventDefault()
-      var isEventTouch = event.type === 'touchstart'
-      var eventMove = isEventTouch ? 'touchmove' : 'mousemove'
-      var eventEnd = isEventTouch ? 'touchend' : 'mouseup'
-      var control = event.target === leverMin ? form.price[0] : form.price[1]
-      var moveStart = isEventTouch ? event.changedTouches[0].pageX : event.pageX
-      var moveEnd = moveStart
-      var initialValue = parseInt(control.value, 10)
-      
-      var getNewValue = function () {
-      return Math.round((moveEnd - moveStart) * range.max / (range.step * scaleLength)) * range.step + initialValue
-      }
-      
-      var onLeverMoving = function (event) {
-      moveEnd = isEventTouch ? event.changedTouches[0].pageX : event.pageX
-      control.value = getNewValue()
-      onValuesGetting()
-      }
-      
-      var onLeverReleasing = function (event) {
-      event.preventDefault()
-      document.removeEventListener(eventMove, onLeverMoving)
-      document.removeEventListener(eventEnd, onLeverReleasing)
-      }
-      
-      document.addEventListener(eventMove, onLeverMoving)
-      document.addEventListener(eventEnd, onLeverReleasing)
-      }
-      
-      form.addEventListener('change', onValuesGetting)
-      leverMin.addEventListener('mousedown', onLeverGrabbing)
-      leverMax.addEventListener('mousedown', onLeverGrabbing)
-      leverMin.addEventListener('touchstart', onLeverGrabbing)
-      leverMax.addEventListener('touchstart', onLeverGrabbing)
-      
-      onValuesGetting()
-      }
-      var cashPopup = document.querySelector('.modal-cash');
-      var elements = document.querySelectorAll('a.buy');
-      var cashClose = cashPopup.querySelector('.modal-close');
-      for (var i = 0; i < elements.length; i++) {
-      elements[i].addEventListener('click', function(evt) {
-        evt.preventDefault();
-        cashPopup.classList.add('modal-show');
-      });
-        
-      cashClose.addEventListener('click', function (evt) {
-        evt.preventDefault();
-        cashPopup.classList.remove('modal-show');
-      });
-        
-      window.addEventListener('keydown', function (evt) {
-        if (evt.keyCode === 27) {
-          evt.preventDefault();
-          
-          if (popup.classList.contains('modal-show')) {
-            popup.classList.remove('modal-show');
-          }
-          
-          if (mapPopup.classList.contains('modal-show')) {
-            mapPopup.classList.remove('modal-show');
-          }
-          
-          if (cashPopup.classList.contains('modal-show')) {
-            cashPopup.classList.remove('modal-show');
-          }
-        }
-      });
-      }
-      
-      var enrtyRoom = document.querySelector('.authorization');
-      var elements = document.querySelectorAll('a.bottom-entry');
-      var closeRoom = enrtyRoom.querySelector('a.exit');
-      for (var i = 0; i < elements.length; i++) {
-      elements[i].addEventListener('click', function(evt) {
-        evt.preventDefault();
-        enrtyRoom.classList.add('room');
-      });
-         
-      closeRoom.addEventListener('click', function (evt) {
-        evt.preventDefault();
-        enrtyRoom.classList.remove('room');
-      });
-        
-        if (document.querySelector('#modal-login')) {
-      var link = document.querySelector('.button-modal');
-      
-      var popup = document.querySelector('.modal-login');
-      var close = popup.querySelector('.modal-close');
-      
-      var form = popup.querySelector('.login-form');
-      var fullname = popup.querySelector('[name=fullname]');
-      var email = popup.querySelector('[name=email]');
-      
-      var isStorageSupport = true;
-      var storage = '';
-      
-      try {
-        storage = localStorage.getItem('fullname');
-      } catch (err) {
-        isStorageSupport = false;
-      }
-      
-      link.addEventListener('click', function (evt) {
-        evt.preventDefault();
-        popup.classList.add('modal-show');
-        
-        if (storage) {
-          fullname.value = storage;
-          email.focus();
-        } else {
-          fullname.focus();
-        }
-      });
-      
-      close.addEventListener('click', function (evt) {
-        evt.preventDefault();
-        popup.classList.remove('modal-show');
-        popup.classList.remove('modal-error');
-      });
-      
-      form.addEventListener('submit', function (evt) {
-        if (!fullname.value || !email.value) {
-          evt.preventDefault();
-          popup.classList.remove('modal-error');
-          popup.offsetWidth = popup.offsetWidth;
-          popup.classList.add('modal-error');
-        } else {
-          if (isStorageSupport) {
-            localStorage.setItem('fullname', fullname.value);
-          }
-        }
-      });
-        
-        
-        
-      var mapLink = document.querySelector('.modal-map-button');
-      
-      var mapPopup = document.querySelector('.modal-map');
-      var mapClose = mapPopup.querySelector('.modal-close');
-      
-        
-      mapLink.addEventListener('click', function (evt) {
-        evt.preventDefault();
-        mapPopup.classList.add('modal-show');
-      });
-      
-      mapClose.addEventListener('click', function (evt) {
-        evt.preventDefault();
-        mapPopup.classList.remove('modal-show');
-      });
-       
-      }
-      function initMap() {
-      var myLatLng = {
-        lat: 59.938794,
-        lng: 30.323083
-      };
-      var map = new google.maps.Map(document.querySelector('#map-container'), {
-        center: myLatLng,
-        disableDefaultUI: true,
-        zoom: 16
-      });
-      var marker = new google.maps.Marker({
-        map: map,
-        position: myLatLng,
-      });
-      }
-        }
+<script src="js/main.js">
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBi_yaXkh4NpYV478vTlBeoPimsvPKi-18&callback=initMap"></script>
   </body>
