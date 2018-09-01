@@ -1,117 +1,36 @@
-if (document.querySelector('#form-filter')) {
-  var range = {
-    min: 0,
-    max: 37000,
-    step: 100
-  }
-  var form = document.querySelector('.form');
-  var rangeOutput = document.querySelectorAll('.range-output');
-  var rangeBar = document.querySelector('.range-bar');
-  var leverMin = document.querySelector('.range-lever-min');
-  var leverMax = document.querySelector('.range-lever-max');
-  var scaleLength = document.querySelector('.range-scale').offsetWidth;
-  form.price[0].step = range.step
-  form.price[0].step = range.step
-  form.price[1].max = range.max
-
-  var onValuesGetting = function () {
-    var valueMin = form.price[0].value;
-    var valueMax = form.price[1].value;
-    var leverMinPos = 100 * valueMin / range.max + '%';
-    var leverMaxPos = 100 * valueMax / range.max + '%';
-    rangeOutput[0].innerHTML = valueMin
-    rangeOutput[1].innerHTML = valueMax
-    form.price[0].max = valueMax
-    form.price[1].min = valueMin
-    rangeBar.style.left = leverMinPos
-    rangeBar.style.right = 'calc(100% - ' + leverMaxPos + ')'
-    leverMin.style.left = 'calc(' + leverMinPos + ' - ' + leverMin.offsetWidth / 2 + 'px)'
-    leverMax.style.left = 'calc(' + leverMaxPos + ' - ' + leverMax.offsetWidth / 2 + 'px)'
-  }
-
-  var onLeverGrabbing = function (event) {
-    event.preventDefault()
-    var isEventTouch = event.type === 'touchstart';
-    var eventMove = isEventTouch ? 'touchmove' : 'mousemove';
-    var eventEnd = isEventTouch ? 'touchend' : 'mouseup';
-    var control = event.target === leverMin ? form.price[0] : form.price[1];
-    var moveStart = isEventTouch ? event.changedTouches[0].pageX : event.pageX;
-    var moveEnd = moveStart;
-    var initialValue = parseInt(control.value, 10);
-
-    var getNewValue = function () {
-      return Math.round((moveEnd - moveStart) * range.max / (range.step * scaleLength)) * range.step + initialValue;
-    }
-
-    var onLeverMoving = function (event) {
-      moveEnd = isEventTouch ? event.changedTouches[0].pageX : event.pageX;
-      control.value = getNewValue()
-      onValuesGetting()
-    }
-
-    var onLeverReleasing = function (event) {
-      event.preventDefault()
-      document.removeEventListener(eventMove, onLeverMoving);
-      document.removeEventListener(eventEnd, onLeverReleasing);
-    }
-
-    document.addEventListener(eventMove, onLeverMoving)
-    document.addEventListener(eventEnd, onLeverReleasing)
-  }
-
-  form.addEventListener('change', onValuesGetting)
-  leverMin.addEventListener('mousedown', onLeverGrabbing)
-  leverMax.addEventListener('mousedown', onLeverGrabbing)
-  leverMin.addEventListener('touchstart', onLeverGrabbing)
-  leverMax.addEventListener('touchstart', onLeverGrabbing)
-
-  onValuesGetting()
-}
 var cashPopup = document.querySelector('.modal-cash');
-var elements = document.querySelectorAll('a.buy');
-var cashCheckout = document.querySelector('.checkout');
+var buyList = document.querySelectorAll('a.buy');
+var cashCheckout = cashPopup.querySelector('.checkout');
 var cashClose = cashPopup.querySelector('.modal-close');
-for (var i = 0; i < elements.length; i++) {
-  elements[i].addEventListener('click', function (evt) {
+
+var onModalClose = function (evt) {
+  evt.preventDefault();
+  document.querySelector('.modal-show').classList.remove('modal-show');
+  window.removeEventListener('keypress', onEscapePress)
+};
+
+var onEscapePress = function (evt) {
+  if (evt.keyCode === 27) {
+    onModalClose(evt);
+  }
+};
+
+cashClose.addEventListener('click', onModalClose);
+cashCheckout.addEventListener('click', onModalClose);
+
+for (var i = 0; i < buyList.length; i++) {
+  buyList[i].addEventListener('click', function (evt) {
     evt.preventDefault();
     cashPopup.classList.add('modal-show');
-  });
-
-  cashClose.addEventListener('click', function (evt) {
-    evt.preventDefault();
-    cashPopup.classList.remove('modal-show');
-  });
-
-  cashCheckout.addEventListener('click', function (evt) {
-    evt.preventDefault();
-    cashPopup.classList.remove('modal-show');
-  });
-
-
-  window.addEventListener('keydown', function (evt) {
-    if (evt.keyCode === 27) {
-      evt.preventDefault();
-
-      if (popup.classList.contains('modal-show')) {
-        popup.classList.remove('modal-show');
-      }
-
-      if (mapPopup.classList.contains('modal-show')) {
-        mapPopup.classList.remove('modal-show');
-      }
-
-      if (cashPopup.classList.contains('modal-show')) {
-        cashPopup.classList.remove('modal-show');
-      }
-    }
+    window.addEventListener('keypress', onEscapePress);
   });
 }
 
 var enrtyRoom = document.querySelector('.authorization');
-var elements = document.querySelectorAll('a.bottom-entry');
+var bottomEntryList = document.querySelectorAll('a.button-entry');
 var closeRoom = enrtyRoom.querySelector('a.exit');
-for (var i = 0; i < elements.length; i++) {
-  elements[i].addEventListener('click', function (evt) {
+for (var i = 0; i < bottomEntryList.length; i++) {
+  bottomEntryList[i].addEventListener('click', function (evt) {
     evt.preventDefault();
     enrtyRoom.classList.add('room');
   });
@@ -121,15 +40,16 @@ for (var i = 0; i < elements.length; i++) {
     enrtyRoom.classList.remove('room');
   });
 }
-if (document.querySelector('#modal-login')) {
+
+if (document.querySelector('#modal-feedback')) {
   var link = document.querySelector('.button-modal');
 
-  var popup = document.querySelector('.modal-login');
-  var close = popup.querySelector('.modal-close');
+  var modalFeedback = document.querySelector('#modal-feedback');
+  var close = modalFeedback.querySelector('.modal-close');
 
-  var form = popup.querySelector('.login-form');
-  var fullname = popup.querySelector('[name=fullname]');
-  var email = popup.querySelector('[name=email]');
+  var feedbackForm = modalFeedback.querySelector('.feedback-form');
+  var fullname = modalFeedback.querySelector('[name=fullname]');
+  var email = modalFeedback.querySelector('[name=email]');
 
   var isStorageSupport = true;
   var storage = '';
@@ -142,7 +62,8 @@ if (document.querySelector('#modal-login')) {
 
   link.addEventListener('click', function (evt) {
     evt.preventDefault();
-    popup.classList.add('modal-show');
+    modalFeedback.classList.add('modal-show');
+    window.addEventListener('keypress', onEscapePress);
 
     if (storage) {
       fullname.value = storage;
@@ -154,40 +75,37 @@ if (document.querySelector('#modal-login')) {
 
   close.addEventListener('click', function (evt) {
     evt.preventDefault();
-    popup.classList.remove('modal-show');
-    popup.classList.remove('modal-error');
+    modalFeedback.classList.remove('modal-show');
+    modalFeedback.classList.remove('modal-error');
   });
 
-  form.addEventListener('submit', function (evt) {
+  feedbackForm.addEventListener('submit', function (evt) {
     if (!fullname.value || !email.value) {
       evt.preventDefault();
-      popup.classList.remove('modal-error');
-      popup.offsetWidth = popup.offsetWidth;
-      popup.classList.add('modal-error');
+      modalFeedback.classList.remove('modal-error');
+      modalFeedback.offsetWidth = modalFeedback.offsetWidth;
+      modalFeedback.classList.add('modal-error');
     } else {
       if (isStorageSupport) {
         localStorage.setItem('fullname', fullname.value);
       }
     }
   });
+}
 
-
+if (document.querySelector('.modal-map-button')) {
   var mapLink = document.querySelector('.modal-map-button');
 
   var mapPopup = document.querySelector('.modal-map');
   var mapClose = mapPopup.querySelector('.modal-close');
 
-
   mapLink.addEventListener('click', function (evt) {
     evt.preventDefault();
     mapPopup.classList.add('modal-show');
+    window.addEventListener('keypress', onEscapePress);
   });
 
-  mapClose.addEventListener('click', function (evt) {
-    evt.preventDefault();
-    mapPopup.classList.remove('modal-show');
-  });
-
+  mapClose.addEventListener('click', onModalClose);
 
   function initMap() {
     var myLatLng = {
@@ -204,4 +122,74 @@ if (document.querySelector('#modal-login')) {
       position: myLatLng,
     });
   }
+}
+
+if (document.querySelector('#filter-form')) {
+  var range = {
+    min: 0,
+    max: 37000,
+    step: 100
+  };
+  var filterForm = document.querySelector('#filter-form');
+  var rangeOutput = document.querySelectorAll('.range-output');
+  var rangeBar = document.querySelector('.range-bar');
+  var leverMin = document.querySelector('.range-lever-min');
+  var leverMax = document.querySelector('.range-lever-max');
+  var scaleLength = document.querySelector('.range-scale').offsetWidth;
+  filterForm.price[0].step = range.step;
+  filterForm.price[0].step = range.step;
+  filterForm.price[1].max = range.max;
+
+  var onValuesGetting = function () {
+    var valueMin = filterForm.price[0].value;
+    var valueMax = filterForm.price[1].value;
+    var leverMinPos = 100 * valueMin / range.max + '%';
+    var leverMaxPos = 100 * valueMax / range.max + '%';
+    rangeOutput[0].innerHTML = valueMin;
+    rangeOutput[1].innerHTML = valueMax;
+    filterForm.price[0].max = valueMax;
+    filterForm.price[1].min = valueMin;
+    rangeBar.style.left = leverMinPos;
+    rangeBar.style.right = 'calc(100% - ' + leverMaxPos + ')';
+    leverMin.style.left = 'calc(' + leverMinPos + ' - ' + leverMin.offsetWidth / 2 + 'px)';
+    leverMax.style.left = 'calc(' + leverMaxPos + ' - ' + leverMax.offsetWidth / 2 + 'px)';
+  };
+
+  var onLeverGrabbing = function (event) {
+    event.preventDefault();
+    var isEventTouch = event.type === 'touchstart';
+    var eventMove = isEventTouch ? 'touchmove' : 'mousemove';
+    var eventEnd = isEventTouch ? 'touchend' : 'mouseup';
+    var control = event.target === leverMin ? filterForm.price[0] : filterForm.price[1];
+    var moveStart = isEventTouch ? event.changedTouches[0].pageX : event.pageX;
+    var moveEnd = moveStart;
+    var initialValue = parseInt(control.value, 10);
+
+    var getNewValue = function () {
+      return Math.round((moveEnd - moveStart) * range.max / (range.step * scaleLength)) * range.step + initialValue;
+    };
+
+    var onLeverMoving = function (event) {
+      moveEnd = isEventTouch ? event.changedTouches[0].pageX : event.pageX;
+      control.value = getNewValue();
+      onValuesGetting();
+    };
+
+    var onLeverReleasing = function (event) {
+      event.preventDefault();
+      document.removeEventListener(eventMove, onLeverMoving);
+      document.removeEventListener(eventEnd, onLeverReleasing);
+    };
+
+    document.addEventListener(eventMove, onLeverMoving);
+    document.addEventListener(eventEnd, onLeverReleasing);
+  };
+
+  filterForm.addEventListener('change', onValuesGetting);
+  leverMin.addEventListener('mousedown', onLeverGrabbing);
+  leverMax.addEventListener('mousedown', onLeverGrabbing);
+  leverMin.addEventListener('touchstart', onLeverGrabbing);
+  leverMax.addEventListener('touchstart', onLeverGrabbing);
+
+  onValuesGetting();
 }
