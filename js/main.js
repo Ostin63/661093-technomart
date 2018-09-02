@@ -27,19 +27,16 @@ for (var i = 0; i < buyList.length; i++) {
 }
 
 var enrtyRoom = document.querySelector('.authorization');
-var bottomEntryList = document.querySelectorAll('a.button-entry');
-var closeRoom = enrtyRoom.querySelector('a.exit');
-for (var i = 0; i < bottomEntryList.length; i++) {
-  bottomEntryList[i].addEventListener('click', function (evt) {
-    evt.preventDefault();
-    enrtyRoom.classList.add('room');
-  });
+var buttonEntry = enrtyRoom.querySelector('.button-entry');
+var closeRoom = enrtyRoom.querySelector('.exit');
 
-  closeRoom.addEventListener('click', function (evt) {
-    evt.preventDefault();
-    enrtyRoom.classList.remove('room');
-  });
+var onEntryPress = function (evt) {
+  evt.preventDefault();
+  enrtyRoom.classList.toggle('room');
 }
+
+buttonEntry.addEventListener('click', onEntryPress);
+closeRoom.addEventListener('click', onEntryPress);
 
 if (document.querySelector('#modal-feedback')) {
   var link = document.querySelector('.button-modal');
