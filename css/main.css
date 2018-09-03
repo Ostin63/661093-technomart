@@ -1110,7 +1110,6 @@ img {
   width: 218px;
   height: 88px;
   padding: 40px 0;
-  display: none;
   background-color: rgba(255, 255, 255, 0.9);
 }
 
@@ -1193,19 +1192,13 @@ img {
   box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
 }
 
-.catalog-item:hover .actions {
-  display: block;
-}
-
-.catalog-item:focus-within .actions {
-  display: block;
-}
-
+.catalog-item:focus-within .image,
 .catalog-item:hover .image {
-  display: none;
+  z-index: -1;
 }
 
 .catalog-item .image {
+  position: absolute;
   width: 218px;
   height: 168px;
 }
