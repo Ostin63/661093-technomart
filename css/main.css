@@ -166,10 +166,11 @@ img {
 
 .search button[type="submit"]:hover {
   opacity: 1;
-  border: 2px solid rgba(255, 255, 255, 0.5);
 }
 
 .search button[type="submit"]:focus {
+  box-shadow: 0 0 0 2px #ffffff;
+  outline: 0;
   opacity: 1;
 }
 
@@ -1313,6 +1314,10 @@ img {
   margin-bottom: 65px;
 }
 
+.list-producers a {
+  display: block;
+}
+
 .list-producers img {
   width: 100%;
   height: auto;
@@ -1327,6 +1332,10 @@ img {
 }
 
 .list-producers li:hover {
+  box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
+}
+
+.list-producers a:focus {
   box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
 }
 
@@ -1671,6 +1680,10 @@ img {
   background-color: #ca2c37;
 }
 
+.main-footer .logtype:focus {
+  background-color: #ca2c37;
+}
+
 .main-footer .logtype:active {
   background-color: #ba2732;
 }
@@ -1727,6 +1740,11 @@ img {
 
 .menu-footer-top li:hover,
 .menu-footer-middle li:hover {
+  text-decoration: underline;
+}
+
+.menu-footer-top a:focus,
+.menu-footer-middle a:focus {
   text-decoration: underline;
 }
 
@@ -1833,6 +1851,10 @@ img {
 
 .menu-footer-bottom .mail:hover,
 .menu-footer-bottom .developer:hover {
+  text-decoration: underline;
+}
+
+.menu-footer-bottom a:focus {
   text-decoration: underline;
 }
 
