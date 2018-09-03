@@ -1114,6 +1114,7 @@ img {
   width: 218px;
   height: 88px;
   padding: 40px 0;
+  display: none;
   background-color: rgba(255, 255, 255, 0.9);
 }
 
@@ -1183,16 +1184,16 @@ img {
   opacity: 0.3;
 }
 
-.catalog-item .actions {
-  display: none;
-}
-
 .catalog-item:hover {
   border-color: #ffffff;
   box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
 }
 
 .catalog-item:hover .actions {
+  display: block;
+}
+
+.catalog-item:focus-within .actions {
   display: block;
 }
 
@@ -2046,8 +2047,7 @@ img {
   border-bottom: 1px solid #ee3643;
 }
 
-.sorting-type .type:focus,
-.sorting-type .function:focus {
+.sorting-type a:focus {
   opacity: 1;
   border-bottom: 1px solid #ee3643;
 }
@@ -2191,29 +2191,18 @@ img {
   box-sizing: border-box;
 }
 
-.range-controls::after {
-  content: "";
-  position: absolute;
-  top: 151px;
-  left: -30px;
-  width: 220px;
-  height: 1px;
-  background-color: #e5e5e5;
-}
-
 .range-controls::before {
   content: "";
   position: absolute;
   top: 0;
   left: -30px;
-  ;
   width: 220px;
   height: 81px;
   border-radius: 5px;
   background-color: #f7f3ec;
 }
 
-.range-controls span {
+.range-controls .range-price {
   position: relative;
   display: inline-block;
   margin-top: 90px;
@@ -2231,12 +2220,12 @@ img {
   background-color: #f7f3ec;
 }
 
-.range-controls span:nth-child(1) {
+.range-controls .range-price-min {
   position: relative;
   margin-left: -30px;
 }
 
-.range-controls span:nth-child(1)::after {
+.range-controls .range-price-min::after {
   content: "";
   position: absolute;
   top: 18px;
@@ -2246,9 +2235,18 @@ img {
   background-color: #000000;
 }
 
-.range-controls span:nth-child(4) {
+.range-controls .range-price-max {
   margin-left: 22px;
   margin-right: -20px;
+}
+
+.range-controls .range-label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .range-scale {
@@ -2269,6 +2267,18 @@ img {
   box-sizing: border-box;
 }
 
+.range-lever:active {
+  cursor: grabbing;
+}
+
+.range-lever:hover {
+  background: hsl(209, 64%, 31%);
+}
+
+.range-input:focus+.range-lever {
+  box-shadow: 0 0 0 3px hsla(0, 0%, 100%, 0.5);
+}
+
 .range-lever {
   position: absolute;
   top: 31px;
@@ -2279,7 +2289,9 @@ img {
   border: 8px solid #ffffff;
   background-color: #ababab;
   box-shadow: 0 2px 1px 0 #cfcfcf;
+  border: 8px solid hsl(0, 0%, 100%);
   border-radius: 50%;
+  box-shadow: 0 2px 1px 0 hsla(0, 0%, 0%, 0.2);
   z-index: 2;
 }
 

@@ -89,15 +89,15 @@
               <fieldset class="range">
                 <legend class="range-title">цена:</legend>
                 <div class="range-controls">
-                  <span>
-                  <label class="range-label range-label-min" for="price-min"></label>
-                  <output class="range-output" for="price-min" aria-hidden="true"></output>
+                  <span class="range-price range-price-min">
+                    <label class="range-label range-label-min" for="price-min"><span class="visually-hidden">от</span></label>
+                    <output class="range-output" for="price-min" aria-hidden="true"></output>
                   </span>
                   <input class="range-input visually-hidden" id="price-min" type="range" name="price" min="0" max="37000" step="100" value="0">
                   <label class="range-lever range-lever-min" for="price-min" aria-hidden="true"></label>
-                  <span>
-                  <label class="range-label range-label-max" for="price-max"></label>
-                  <output class="range-output" for="price-max" aria-hidden="true"></output>
+                  <span class="range-price range-price-max">
+                    <label class="range-label range-label-max" for="price-max"><span class="visually-hidden">до</span></label>
+                    <output class="range-output" for="price-max" aria-hidden="true"></output>
                   </span>
                   <input class="range-input visually-hidden" id="price-max" type="range" name="price" min="0" max="37000" step="100" value="30000">
                   <label class="range-lever range-lever-max" for="price-max" aria-hidden="true"></label>
