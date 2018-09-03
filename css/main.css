@@ -1110,7 +1110,7 @@ img {
   width: 218px;
   height: 88px;
   padding: 40px 0;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgb(255, 255, 255);
 }
 
 .catalog-item .buy,
@@ -2801,12 +2801,11 @@ fieldset:nth-child(3) .filter-option {
   border: 2px solid #ee3643;
 }
 
-.button-cash .continue:focus {
+.button-cash a.continue:focus {
   border: 2px solid #ee3643;
 }
 
 .button-cash .continue:active {
   color: #c5c5c5;
-  border: 2px solid #ba2732;
   border: 2px solid #ee3643;
 }
