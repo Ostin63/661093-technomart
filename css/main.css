@@ -2715,6 +2715,11 @@ fieldset:nth-child(3) .filter-option {
   opacity: 0.3;
 }
 
+.modal-close:focus::before,
+.modal-close:focus::after {
+  opacity: 0.3;
+}
+
 .modal-close:active::before,
 .modal-close:active::after {
   opacity: 1;
