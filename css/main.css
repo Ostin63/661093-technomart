@@ -2293,7 +2293,7 @@ img {
 }
 
 .range-input:focus+.range-lever {
-  box-shadow: 0 0 0 3px hsla(0, 0%, 100%, 0.5);
+  box-shadow: 0px 2px 10px 0 rgba(0, 1, 1, 0.75);
 }
 
 .range-lever {
