@@ -1205,7 +1205,6 @@ img {
   z-index: -1;
 }
 
-
 .catalog-item .image {
   position: absolute;
   top: 0;
@@ -2098,8 +2097,8 @@ img {
   fill: #000000;
 }
 
-.sorting-dir-type  .up a:focus path,
-.sorting-dir-type  .down a:focus path {
+.sorting-dir-type .up a:focus path,
+.sorting-dir-type .down a:focus path {
   fill: #000000;
 }
 
@@ -2398,7 +2397,7 @@ fieldset:nth-child(3) .filter-option {
   width: 27px;
   height: 23px;
   background: #ffffff url("../img/checkbox-on.svg") 0 0 no-repeat;
-  opacity: 0.8      ;
+  opacity: 0.8;
 }
 
 .filter-input-checkbox:hover+label::after {
