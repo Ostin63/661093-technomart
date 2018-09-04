@@ -1197,8 +1197,11 @@ img {
   z-index: -1;
 }
 
+
 .catalog-item .image {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 218px;
   height: 168px;
 }
