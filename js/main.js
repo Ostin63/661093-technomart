@@ -6,7 +6,7 @@ var cashClose = cashPopup.querySelector('.modal-close');
 var onModalClose = function (evt) {
   evt.preventDefault();
   document.querySelector('.modal-show').classList.remove('modal-show');
-  window.removeEventListener('keypress', onEscapePress)
+  window.removeEventListener('keydown', onEscapePress)
 };
 
 var onEscapePress = function (evt) {
@@ -22,7 +22,7 @@ for (var i = 0; i < buyList.length; i++) {
   buyList[i].addEventListener('click', function (evt) {
     evt.preventDefault();
     cashPopup.classList.add('modal-show');
-    window.addEventListener('keypress', onEscapePress);
+    window.addEventListener('keydown', onEscapePress);
   });
 }
 
@@ -60,7 +60,7 @@ if (document.querySelector('#modal-feedback')) {
   link.addEventListener('click', function (evt) {
     evt.preventDefault();
     modalFeedback.classList.add('modal-show');
-    window.addEventListener('keypress', onEscapePress);
+    window.addEventListener('keydown', onEscapePress);
 
     if (storage) {
       fullname.value = storage;
@@ -99,7 +99,7 @@ if (document.querySelector('.modal-map-button')) {
   mapLink.addEventListener('click', function (evt) {
     evt.preventDefault();
     mapPopup.classList.add('modal-show');
-    window.addEventListener('keypress', onEscapePress);
+    window.addEventListener('keydown', onEscapePress);
   });
 
   mapClose.addEventListener('click', onModalClose);
