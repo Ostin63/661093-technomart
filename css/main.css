@@ -2033,45 +2033,32 @@ img {
   list-style: none;
 }
 
-.sorting-type .sorting-current a{
+.sorting-type .sorting-current a {
   color: #ee3643;
 }
 
-.sorting-type a:hover {
-  color: #000000;
-  border-bottom: 1px solid #ee3643;
-}
-
-.sorting-type a:focus {
-  color: #000000;
-  border-bottom: 1px solid #ee3643;
-}
-
-
-.sorting-type .type,
-.sorting-type .function {
-  color: #000000;
-  opacity: 0.3;
+.sorting-type .type a,
+.sorting-type .function a {
+  color: rgba(0, 0, 0, 0.3);
   border-bottom: 1px dotted #ee3643;
 }
 
-.sorting-type .type:hover,
-.sorting-type .function:hover {
-  opacity: 1;
-  border-bottom: 1px solid #ee3643;
+.sorting-type .type a:hover,
+.sorting-type .function a:hover,
+.sorting-type .sorting-current a:hover {
+  color: rgba(0, 0, 0, 1);
+  border-bottom: 1px solid rgba(238, 54, 67, 1);
 }
 
-.sorting-type .type a: focus,
-.sorting-type .function a:focus {
-  opacity: 1;
-  border-bottom: 1px solid #ee3643;
-}}
+.sorting-type a:focus {
+  color: rgba(0, 0, 0, 1);
+  border-bottom: 1px solid rgba(238, 54, 67, 1);
+}
 
-.sorting-type .type:active,
 .sorting-type .type a:active,
-.sorting-type .function:active,
-.sorting-type .function a:active {
-  color: #ee3643;
+.sorting-type .function a:active,
+.sorting-type .sorting-current a:active {
+  color: rgba(238, 54, 67, 1);
   border-bottom: 1px dotted #f7f3ec;
 }
 
