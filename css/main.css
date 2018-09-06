@@ -79,7 +79,7 @@ a {
   font-size: 30px;
   line-height: 30px;
   font-weight: 400;
-  font-family: "Cuprum";
+  font-family: "Cuprum", Arial, sans-serif;
   text-transform: uppercase;
 }
 
@@ -352,7 +352,7 @@ img {
   color: #ee3643;
   font-size: 16px;
   line-height: 23px;
-  font-family: "Cuprum";
+  font-family: "Cuprum", Arial, sans-serif;
   font-style: italic;
 }
 
@@ -739,7 +739,7 @@ img {
   padding: 0;
   font-size: 24px;
   line-height: 30px;
-  font-family: "Cuprum";
+  font-family: "Cuprum", Arial, sans-serif;
   font-weight: 700;
 }
 
@@ -855,7 +855,7 @@ img {
 }
 
 .slider {
-  font-family: "Cuprum";
+  font-family: "Cuprum", Arial, sans-serif;
   width: 620px;
   position: relative;
   color: #ffffff;
@@ -882,6 +882,7 @@ img {
   padding: 10px;
   border-radius: 50%;
   box-sizing: border-box;
+  vertical-align: middle;
 }
 
 .slider-controls .slide-control::after {
@@ -1122,7 +1123,7 @@ img {
   margin-bottom: 7px;
   font-size: 14px;
   font-weight: 400;
-  font-family: "Cuprum", sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   line-height: 18px;
   text-decoration: none;
   text-transform: uppercase;
@@ -1241,7 +1242,7 @@ img {
   margin-left: -1px;
   margin-top: 11px;
   margin-bottom: 5px;
-  font-family: "PTSans";
+  font-family: "PTSans", Arial, sans-serif;
   width: 168px;
   letter-spacing: 0.0px;
 }
@@ -1251,7 +1252,7 @@ img {
   margin-top: 4px;
   margin-bottom: 3px;
   font-size: 17px;
-  font-family: "PTSans";
+  font-family: "PTSans", Arial, sans-serif;
   font-weight: 700;
   color: #999;
   text-decoration: line-through;
@@ -1263,7 +1264,7 @@ img {
   padding: 9px 35px;
   margin-bottom: 20px;
   font-size: 17px;
-  font-family: "PTSans";
+  font-family: "PTSans", Arial, sans-serif;
   font-weight: 700;
   color: white;
   background-color: #ee3643;
@@ -1379,7 +1380,7 @@ img {
   margin-left: 1px;
   font-size: 13px;
   line-height: 24px;
-  font-family: "PTSans";
+  font-family: "PTSans", Arial, sans-serif;
   letter-spacing: 0.06px;
 }
 
@@ -1418,6 +1419,7 @@ img {
   width: 240px;
   height: 61px;
   top: 30px;
+  vertical-align: middle;
 }
 
 .slider-item-wrapper:nth-child(2) label {
@@ -1467,7 +1469,7 @@ img {
 .slider-info p {
   font-size: 13px;
   line-height: 24px;
-  font-family: "PTSans";
+  font-family: "PTSans", Arial, sans-serif;
   margin: 0;
   margin-left: 0px;
   letter-spacing: 0.05px;
@@ -1576,7 +1578,7 @@ img {
 .main-bottom p {
   font-size: 13px;
   line-height: 24px;
-  font-family: "PTSans";
+  font-family: "PTSans", Arial, sans-serif;
   letter-spacing: 0.12px;
 }
 
@@ -1644,7 +1646,7 @@ img {
   background: linear-gradient(#32425c 193px, #293449 107px);
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  font-family: "Cuprum";
+  font-family: "Cuprum", Arial, sans-serif;
 }
 
 .main-footer .main-footer-top {
@@ -1771,7 +1773,7 @@ img {
   padding-bottom: 16px;
   font-size: 16px;
   line-height: 18px;
-  font-family: "Cuprum";
+  font-family: "Cuprum", Arial, sans-serif;
 }
 
 .menu-footer-bottom a {
@@ -1881,7 +1883,7 @@ img {
   color: #000000;
   font-size: 13px;
   line-height: 18px;
-  font-family: "PTSans", sans-serif;
+  font-family: "PTSans", Arial, sans-serif;
   font-weight: 400;
   text-transform: uppercase;
 }
@@ -2004,7 +2006,7 @@ img {
   padding-left: 19px;
   padding-right: 17px;
   margin-top: 20px;
-  font-family: "PTSans", sans-serif;
+  font-family: "PTSans", Arial, sans-serif;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -2016,7 +2018,7 @@ img {
 .sorting-template h2 {
   font-size: 13px;
   line-height: 18px;
-  font-family: "PTSans", sans-serif;
+  font-family: "PTSans", Arial, sans-serif;
   font-weight: 400;
   box-sizing: border-box;
   padding: 0;
@@ -2144,7 +2146,7 @@ img {
   border-radius: 3px;
   font-size: 13px;
   line-height: 18px;
-  font-family: "PTSans";
+  font-family: "PTSans", Arial, sans-serif;
   vertical-align: middle;
 }
 
@@ -2229,8 +2231,9 @@ img {
   font-size: 17px;
   line-height: 18px;
   font-weight: 400;
-  font-family: "PTSans";
+  font-family: "PTSans", Arial, sans-serif;
   text-align: center;
+  vertical-align: middle;
   color: #283136;
   border: none;
   border-radius: 5px;
@@ -2557,7 +2560,7 @@ fieldset:nth-child(3) .filter-option {
   margin: 0;
   font-size: 13px;
   line-height: 24px;
-  font-family: "ptsans";
+  font-family: "PTSans", Arial, sans-serif;
   letter-spacing: 0.01px;
 }
 
@@ -2650,17 +2653,12 @@ fieldset:nth-child(3) .filter-option {
   margin-top: 10px;
   font-size: 13px;
   line-height: 18px;
-  font-family: "PTSans";
+  font-family: "PTSans", Arial, sans-serif;
   padding: 8px;
   padding-left: 16px;
   border: 2px solid #d7dcde;
   color: rgb(169, 169, 169);
   outline: none;
-}
-
-.feedback-item textarea {
-  padding-top: 10px;
-  padding-bottom: 10px;
 }
 
 .feedback-form .button {
