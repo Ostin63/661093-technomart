@@ -1055,6 +1055,7 @@ img {
 
 .catalog-popular .contents {
   margin: 29px 0;
+  color: #32425c;
 }
 
 .catalog-popular .button,
@@ -1304,7 +1305,8 @@ img {
 
 .popular-prod .contents {
   margin: 29px 0;
-  padding-top: 1px
+  padding-top: 1px;
+  color: #32425c;
 }
 
 .popular-prod .button {
@@ -1888,6 +1890,10 @@ img {
   text-transform: uppercase;
 }
 
+.store-item h2 {
+  color: #32425c;
+}
+
 .store-item h3 {
   font-size: 30px;
   line-height: 30px;
@@ -2287,10 +2293,6 @@ img {
   box-sizing: border-box;
 }
 
-.range-lever:active {
-  cursor: grabbing;
-}
-
 .range-lever:hover {
   background: hsl(209, 64%, 31%);
 }
@@ -2312,6 +2314,7 @@ img {
   border: 8px solid hsl(0, 0%, 100%);
   border-radius: 50%;
   box-shadow: 0 2px 1px 0 hsla(0, 0%, 0%, 0.2);
+  cursor: grabbing;
   z-index: 2;
 }
 
