@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>Интернет-магазин строительных материалов и инструментов для ремонта"Техномарт"</title>
-    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/normalize.min.css" rel="stylesheet">
     <link href="css/main.min.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
       <div class="header container">
         <div class="top-menu">
-          <a class="main-header-logo" href="#nohere">Техномарт</a>
+          <a class="main-header-logo">Техномарт</a>
           <form class="search" action="https://echo.htmlacademy.ru" method="post">
             <input type="search" placeholder="поиск:" class="input">
             <button type="submit"><span class="visually-hidden">Отправить запрос</span></button>
@@ -44,25 +44,25 @@
         <nav class="main-nav">
           <ul class="site-navigation">
             <li>
-              <a class="navigation-button">Главная</a>
+              <a class="navigation-button nav-button-1">Главная</a>
             </li>
             <li>
-              <a class="navigation-button" href="#nohere">Компания</a>
+              <a class="navigation-button nav-button-2" href="#nohere">Компания</a>
             </li>
             <li>
-              <a class="navigation-button" href="catalog.html">Каталог</a>
+              <a class="navigation-button nav-button-3" href="catalog.html">Каталог</a>
             </li>
             <li>
-              <a class="navigation-button" href="#nohere">Новости</a>
+              <a class="navigation-button nav-button-4" href="#nohere">Новости</a>
             </li>
             <li>
-              <a class="navigation-button" href="#nohere">Спецпредложения</a>
+              <a class="navigation-button nav-button-5" href="#nohere">Спецпредложения</a>
             </li>
             <li>
-              <a class="navigation-button" href="#nohere">Доставка</a>
+              <a class="navigation-button nav-button-6" href="#nohere">Доставка</a>
             </li>
             <li>
-              <a class="navigation-button" href="#nohere">Контакты</a>
+              <a class="navigation-button nav-button-7" href="#nohere">Контакты</a>
             </li>
           </ul>
         </nav>
@@ -105,8 +105,8 @@
                   <input class="visually-hidden product-1" type="radio" id="product-1" name="toggle" hidden>
                   <input class="visually-hidden product-2" type="radio" id="product-2" name="toggle" checked hidden>
                   <div class="slider-controls">
-                    <label class="slide-control slide-control-1 product-1" for="product-1" hidden>Первый</label>
-                    <label class="slide-control slide-control-2 product-2" for="product-2" hidden>Второй</label>
+                    <label class="slide-control slide-control-1" for="product-1" hidden>Первый</label>
+                    <label class="slide-control slide-control-2" for="product-2" hidden>Второй</label>
                   </div>
                   <div class="control-arrow">
                     <label class="left" for="product-1"><span class="visually-hidden">влево</span></label>
@@ -145,7 +145,7 @@
               <a href="#nohere" class="buy">Купить</a>
               <a href="#nohere" class="bookmark">В закладки</a>
             </div>
-            <img class="image" src="img/card-1.jpg" width="218" height="168" alt="Слайд">
+            <img class="image image-1" src="img/card-1.jpg" width="218" height="168" alt="Слайд">
             <span class="title">Перфоратор BOSCH BFG 9000</span>
             <p class="discount">32500 Р.</p>
             <div class="price">25500 Р</div>
@@ -165,7 +165,7 @@
               <a href="#nohere" class="buy">Купить</a>
               <a href="#nohere" class="bookmark">В закладки</a>
             </div>
-            <img class="image" src="img/card-3.jpg" width="218" height="168" alt="Слайд">
+            <img class="image image-3" src="img/card-3.jpg" width="218" height="168" alt="Слайд">
             <span class="title">Перфоратор BOSCH BFG 6000</span>
             <p class="discount">30500 Р.</p>
             <div class="price">25500 Р</div>
@@ -176,7 +176,7 @@
               <a href="#nohere" class="buy">Купить</a>
               <a href="#nohere" class="bookmark">В закладки</a>
             </div>
-            <img class="image" src="img/card-4.jpg" width="218" height="168" alt="Слайд">
+            <img class="image image-4" src="img/card-4.jpg" width="218" height="168" alt="Слайд">
             <span class="title">Перфоратор BOSCH BFG 2000</span>
             <p class="discount"></p>
             <div class="price">12500 Р</div>
@@ -235,10 +235,16 @@
             <p>Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
           </div>
           <div class="slider-services">
-            <ul class="slider-controls-services">
+            <input class="visually-hidden slider-control service-1" type="radio" id="service-1" name="toggl" value="Доставка" checked hidden>
+            <input class="visually-hidden slider-control service-2" type="radio" id="service-2" name="toggl" value="Гарантия" hidden>
+            <input class="visually-hidden slider-control service-3" type="radio" id="service-3" name="toggl" value="Кредит" hidden>
+            <div class="slider-controls-services">
+              <label for="service-1" hidden>Доставка</label>
+              <label for="service-2" hidden>Гарантия</label>
+              <label for="service-3" hidden>Кредит</label>
+            </div>
+            <ul class="slider-item-services">
               <li class="slider-item-wrapper">
-                <input class="visually-hidden slider-control-services" type="radio" id="service-1" name="toggl" value="Доставка" checked hidden>
-                <label for="service-1" hidden>Доставка</label>
                 <div class="slider-info slider-info-1">
                   <h3>Доставка</h3>
                   <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!</p>
@@ -246,8 +252,6 @@
                 </div>
               </li>
               <li class="slider-item-wrapper">
-                <input class="visually-hidden slider-control-services" type="radio" id="service-2" name="toggl" value="Гарантия" hidden>
-                <label for="service-2" hidden>Гарантия</label>
                 <div class="slider-info slider-info-2">
                   <h3>Гарантия</h3>
                   <p>Если купленный у нас товар поломается или заискрит,<br> а также в случае пожара, спровоцированного его возгаранием,<br> вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.</p>
@@ -255,8 +259,6 @@
                 </div>
               </li>
               <li class="slider-item-wrapper">
-                <input class="visually-hidden slider-control-services" type="radio" id="service-3" name="toggl" value="Кредит" hidden>
-                <label for="service-3" hidden>Кредит</label>
                 <div class="slider-info slider-info-3">
                   <h3>Кредит</h3>
                   <p>Залезть в долговую яму стало проще!</p>
@@ -330,7 +332,7 @@
           <li><a href="#nohere">Доставка</a></li>
           <li><a href="#nohere">Контакты</a></li>
         </ul>
-        <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 +7 (812) 555-05-55</p>
+        <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <a>+7 (812) 555-05-55</a></p>
         <ul class="menu-footer-middle">
           <li><a href="#nohere">Материалы</a></li>
           <li><a href="#nohere">Техника</a></li>
