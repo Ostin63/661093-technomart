@@ -1523,7 +1523,7 @@ img {
 }
 
 .slider-services input:hover~label {
-  background-color: #ffffff;
+  background-color: #293449;
   box-shadow: 0px 1px 0 0 #293449, inset 0px 1px 0 0 #405069;
 }
 
