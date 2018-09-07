@@ -1699,11 +1699,9 @@ img {
   letter-spacing: 0.05px;
 }
 
-@media screen and (-ms-high-contrast: active),
-(-ms-high-contrast: none) {
-  .main-footer .logtype {
-    margin-left: -150px;
-  }
+.main-footer-top h2 {
+  width: 0;
+  height: 0;
 }
 
 .main-footer .logtype:hover {
