@@ -1413,6 +1413,7 @@ img {
   position: relative;
   padding-left: 0;
   margin-top: 20px;
+  margin-bottom: 103px;
   display: flex;
   flex-direction: column;
 }
@@ -1434,7 +1435,6 @@ img {
   height: 61px;
   top: 30px;
   vertical-align: middle;
-  box-sizing: border-box;
   text-align: left;
   padding-left: 22px;
   padding-top: 13px;
@@ -1442,10 +1442,13 @@ img {
   line-height: 30px;
   font-weight: 700;
   color: #ffffff;
-  background-color: #32425c;
-  border-bottom: 1px solid #4e637c;
-  border-top: 1px solid #4e637c;
+  background-color: #31425c;
+  box-shadow: 0px 1px 0 0 #283347, inset 0px 1px 0 0 #3f4f68;
   box-sizing: border-box;
+}
+
+.slider-controls-services label:hover {
+  background-color: #283347;
 }
 
 .slider-item-services {
@@ -1522,18 +1525,12 @@ img {
   margin-top: 32px;
 }
 
-.slider-services input:hover~label {
-  background-color: #293449;
-  box-shadow: 0px 1px 0 0 #293449, inset 0px 1px 0 0 #405069;
-}
-
 .service-1:checked~.slider-controls-services label:nth-child(1),
 .service-2:checked~.slider-controls-services label:nth-child(2),
 .service-3:checked~.slider-controls-services label:nth-child(3) {
   color: #32425c;
   background-color: white;
-  border-bottom: 1px solid #f4f8f9;
-  border-top: 1px solid #f4f8f9;
+  box-shadow: none;
 }
 
 .service-1:checked~.slider-item-services .slider-info-1,
@@ -1543,7 +1540,6 @@ img {
   top: 28px;
   left: 320px;
   width: 618px;
-  height: 240px;
 }
 
 .slider-item-button {
