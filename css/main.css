@@ -1452,6 +1452,12 @@ img {
 
 .slider-item-services {
   list-style: none;
+}
+
+.slider-info-1 {
+  background-image: url("../img/transport.png");
+  background-repeat: no-repeat;
+  background-size: 468px 261px;
   background-position: 149px 24px;
 }
 
