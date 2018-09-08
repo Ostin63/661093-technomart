@@ -1371,7 +1371,6 @@ img {
 .catalog-services {
   background-color: #f4f8fa;
   padding-top: 35px;
-  padding-bottom: 26px;
 }
 
 .catalog-services .serv {
@@ -1522,7 +1521,7 @@ img {
 .slider-info {
   display: none;
   margin-top: 32px;
-  min-height: 217px;
+  min-height: 267px;
 }
 
 .service-1:checked~.slider-controls-services label:nth-child(1),
