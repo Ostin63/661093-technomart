@@ -2127,8 +2127,8 @@ img {
   fill: #000000;
 }
 
-.up a:focus path,
-.down a:focus path {
+.sorting-up:focus path,
+.sorting-down:focus path {
   fill: #000000;
 }
 
