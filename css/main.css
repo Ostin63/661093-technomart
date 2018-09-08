@@ -1812,13 +1812,18 @@ img {
 .main-footer-bottom .footer-social {
   width: 129px;
   margin-top: 20px;
-  margin-left: 107px;
+  margin-left: 108px;
   padding-left: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   list-style: none;
+}
+
+.inner-page .footer-social {
+  width: 130px;
+  margin-top: 21px;
 }
 
 .footer-social .social-button {
