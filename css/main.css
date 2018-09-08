@@ -1241,10 +1241,14 @@ img {
   text-decoration: line-through;
 }
 
+.catalog-item .discount-now {
+  height: 18px;
+}
+
 .catalog-item .price {
   position: relative;
   margin-top: 7px;
-  padding: 9px 36px;
+  padding: 9px 35px;
   margin-bottom: 20px;
   font-size: 17px;
   font-family: "PTSans", Arial, sans-serif;
@@ -1258,7 +1262,7 @@ img {
   content: "";
   position: absolute;
   top: 0;
-  right: -26px;
+  right: -27px;
   width: 0;
   height: 0;
   border: 19px solid white;
