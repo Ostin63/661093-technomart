@@ -1515,7 +1515,7 @@ img {
 .service-1:checked~.slider-item-services .slider-info-1,
 .service-2:checked~.slider-item-services .slider-info-2,
 .service-3:checked~.slider-item-services .slider-info-3 {
-  display: block; 
+  display: block;
   top: 28px;
   left: 320px;
   width: 618px;
@@ -1530,7 +1530,7 @@ img {
 
 .main-bottom {
   padding-top: 56px;
-  padding-bottom: 86px;
+  padding-bottom: 85px;
 }
 
 .main-bottom .promo-contacts {
@@ -2214,7 +2214,6 @@ img {
   letter-spacing: -0.7px;
 }
 
-
 .range {
   margin-top: 10px;
   padding: 0;
@@ -2238,22 +2237,18 @@ img {
   padding-top: 39px;
   padding-right: 20px;
   padding-left: 20px;
-  
   background-color: #f7f3ec;
-  
   border-radius: 5px;
 }
 
 .range-controls .scale {
   height: 2px;
-
   background: #d7dcde;
 }
 
 .range-controls .bar {
   width: 80%;
   height: 2px;
-
   background: #00ca74;
 }
 
@@ -2261,11 +2256,9 @@ img {
   position: absolute;
   top: 31px;
   left: 0;
-  
   width: 4px;
   height: 4px;
   padding: 0;
-
   border: 8px solid #ffffff;
   background-color: #ababab;
   box-shadow: 0 2px 1px 0 #cfcfcf;
@@ -2288,7 +2281,6 @@ img {
 .price-controls label {
   display: inline-block;
   width: 90px;
-  
   font-size: 16px;
   text-transform: uppercase;
   box-sizing: border-box;
@@ -2297,7 +2289,6 @@ img {
 .price-controls input {
   width: 95px;
   padding: 8px 0px;
-  
   font-size: 17px;
   line-height: 18px;
   font-weight: 400;
@@ -2327,9 +2318,7 @@ img {
   width: 10px;
   height: 1px;
   background-color: #000000;
-  
 }
-
 
 .filters fieldset {
   border: none;
@@ -2349,7 +2338,7 @@ img {
 
 .item-factories .filter-option,
 .item-power .filter-option {
-  padding-bottom: 5px;
+  padding-bottom: 6px;
 }
 
 .filter-item {
@@ -2422,7 +2411,6 @@ img {
   box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #000000;
 }
 
-
 .filter-category .filter-option {
   margin-top: 15px;
 }
@@ -2474,8 +2462,8 @@ img {
 }
 
 .filter-item:nth-child(3) {
-  margin-top: 25px;
-  letter-spacing: 1px;
+  margin-top: 21px;
+  letter-spacing: 1.1px;
 }
 
 .filter-input {
@@ -2489,7 +2477,7 @@ img {
 .inner-page .filter-button {
   width: 140px;
   padding: 9px 0;
-  margin-top: 59px;
+  margin-top: 57px;
   color: #000000;
   font-size: 13px;
   line-height: 18px;
