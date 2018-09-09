@@ -28,7 +28,7 @@ for (var i = 0; i < buyList.length; i++) {
 
 var enrtyRoom = document.querySelector('.authorization');
 var buttonEntry = enrtyRoom.querySelector('.button-entry');
-var closeRoom = enrtyRoom.querySelector('.exit');
+var closeRoom = enrtyRoom.querySelector('.exit-area');
 
 var onEntryPress = function (evt) {
   evt.preventDefault();
