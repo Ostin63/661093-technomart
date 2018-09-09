@@ -1416,8 +1416,8 @@ img {
   line-height: 30px;
   font-weight: 700;
   color: #ffffff;
-  background-color: #31425c;
-  box-shadow: 0px 1px 0 0 #283347, inset 0px 1px 0 0 #3f4f68;
+  background-color: #32425c;
+  box-shadow: 0px 1px 0 0 #293449, inset 0px 1px 0 0 #405069;
   box-sizing: border-box;
 }
 
@@ -1426,7 +1426,7 @@ img {
 }
 
 .slider-controls-services label:hover {
-  background-color: #283347;
+  background-color: #293449;
 }
 
 .slider-item-services {
